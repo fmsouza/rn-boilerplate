@@ -2,8 +2,8 @@ import React, { useLayoutEffect, useState } from 'react';
 import { Button, Text, View } from 'react-native';
 import { useNavigation, useTheme } from '@react-navigation/native';
 
-import { Container, Icon } from './shared/components';
-import { makeStyles } from './shared/styles';
+import { Container, Icon } from '~shared/components';
+import { makeStyles } from '~shared/styles';
 import { SecondScreen } from './SecondScreen';
 
 const useStyles = makeStyles(theme => ({

@@ -3,8 +3,9 @@ import merge from 'lodash/merge';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'react-native';
-import { initialScreen, screens } from './src/routes';
-import theme, { headerTheme, statusBarTheme } from './src/theme';
+
+import { initialScreen, screens } from '~app/routes';
+import theme, { headerTheme, statusBarTheme } from '~app/theme';
 
 const Stack = createStackNavigator();
 
