@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "android:build": "cd android && ./gradlew assembleRelease && cd .. && cp android/app/build/outputs/apk/release/app-release.apk app-release.apk",
     "logcat": "adb logcat *:S ReactNative:V ReactNativeJS:V",
     "ios": "react-native run-ios",
     "start": "react-native start",
