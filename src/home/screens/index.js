@@ -17,7 +17,10 @@ const screens = [HomeScreen, SecondScreen];
 const Stack = createStackNavigator();
 
 export const HomeNavigator = withProviders([HomeProvider], (props) => (
-  <Stack.Navigator name={ROUTE_NAME} initialRouteName={initialScreen.route}>
+  <Stack.Navigator
+    name={ROUTE_NAME}
+    initialRouteName={initialScreen.route}
+    headerMode="none">
     {screens.map((screen) => (
       <Stack.Screen
         key={screen.route}

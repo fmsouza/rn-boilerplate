@@ -1,9 +1,9 @@
-import React, { useLayoutEffect, useState } from 'react';
-import { Button, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { Button, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useTheme } from 'react-native-paper';
 
-import { Container, Icon } from '~/shared/widgets';
+import { Container, Screen } from '~/shared/widgets';
 import { makeStyles } from '~/shared/styles';
 
 import { useHome } from '~/home/state';
@@ -37,25 +37,17 @@ export const HomeScreen = () => {
     navigation.navigate(SecondScreen.route);
   };
 
-  useLayoutEffect(() => {
-    navigation.setOptions({
-      headerRight: () => (
-        <View style={styles.rightHeaderContainer}>
-          <Icon.Button name="plus" onPress={handleButtonTap} />
-        </View>
-      ),
-    });
-  }, [navigation, setCount, styles.rightHeaderContainer]);
-
   return (
-    <Container style={styles.container}>
-      <Text>Count: {count}</Text>
-      <Button
-        title={hello}
-        onPress={handleNextPagePress}
-        color={colors.accent}
-      />
-    </Container>
+    <Screen title="Home">
+      <Container style={styles.container}>
+        <Text>Count: {count}</Text>
+        <Button
+          title={hello}
+          onPress={handleNextPagePress}
+          color={colors.accent}
+        />
+      </Container>
+    </Screen>
   );
 };
 

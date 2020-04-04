@@ -1,32 +1,32 @@
 import React from 'react';
-import { SafeAreaView, Text, StyleSheet, View, Button } from 'react-native';
+import { Text, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-export const SecondScreen = () => {
-  const navigation = useNavigation();
-  const handleBackPress = () => {
-    navigation.goBack();
-  };
-  return (
-    <SafeAreaView>
-      <View style={styles.container}>
-        <Text>Congratulations! You navigated to the second screen!</Text>
-        <Button title="Go back" onPress={handleBackPress} />
-      </View>
-    </SafeAreaView>
-  );
-};
+import { makeStyles } from '~/shared/styles';
+import { Container, Screen } from '~/shared/widgets';
 
-SecondScreen.route = 'Second';
-
-SecondScreen.options = () => ({
-  title: 'Second page',
-});
-
-const styles = StyleSheet.create({
+const useStyles = makeStyles((theme) => ({
   container: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+}));
+
+export const SecondScreen = () => {
+  const styles = useStyles();
+  const navigation = useNavigation();
+  const handleBackPress = () => {
+    navigation.goBack();
+  };
+  return (
+    <Screen title="Second screen" subtitle="Very nice!">
+      <Container style={styles.container}>
+        <Text>Congratulations! You navigated to the second screen!</Text>
+        <Button title="Go back" onPress={handleBackPress} />
+      </Container>
+    </Screen>
+  );
+};
+
+SecondScreen.route = 'Second';
