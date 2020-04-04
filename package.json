@@ -9,7 +9,7 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "upgrade": "react-native upgrade",
+    "upgrade:rn": "react-native upgrade",
     "lint": "eslint ."
   },
   "dependencies": {
