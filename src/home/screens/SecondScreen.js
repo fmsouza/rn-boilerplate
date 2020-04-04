@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { Button, Text } from 'react-native-paper';
 
 import { makeStyles } from '~/shared/styles';
 import { Container, Screen } from '~/shared/widgets';
@@ -23,7 +23,9 @@ export const SecondScreen = () => {
     <Screen title="Second screen" subtitle="Very nice!">
       <Container style={styles.container}>
         <Text>Congratulations! You navigated to the second screen!</Text>
-        <Button title="Go back" onPress={handleBackPress} />
+        <Button mode="contained" icon="chevron-left" onPress={handleBackPress}>
+          Go back
+        </Button>
       </Container>
     </Screen>
   );

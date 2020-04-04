@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Text } from 'react-native';
+import { Button, Text } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 import { useTheme } from 'react-native-paper';
 
@@ -37,12 +37,14 @@ export const HomeScreen = () => {
     navigation.navigate(SecondScreen.route);
   };
 
+  const actions = [{ id: 'add', icon: 'plus', onPress: handleButtonTap }];
+
   return (
-    <Screen title="Home">
+    <Screen title="Home" appBarActions={actions}>
       <Container style={styles.container}>
         <Text>Count: {count}</Text>
         <Button
-          title={hello}
+          children={hello}
           onPress={handleNextPagePress}
           color={colors.accent}
         />
