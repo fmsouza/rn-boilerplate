@@ -29,7 +29,7 @@ export const Screen = ({ title, subtitle, hideAppBar, children }) => {
       {!hideAppBar && (
         <View style={styles.header}>
           <Appbar.Header>
-            {navigation.canGoBack() && (
+            {navigation.isFocused() && navigation.canGoBack() && (
               <Appbar.BackAction onPress={handleBackButton} />
             )}
             <Appbar.Content title={title} subtitle={subtitle} />
