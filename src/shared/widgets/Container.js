@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { SafeAreaView, View, StyleSheet } from 'react-native';
 import { makeStyles } from '../styles';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   safeWrapper: {
     flex: 1,
   },
