@@ -16,9 +16,11 @@ const useStyles = makeStyles((theme) => ({
 export const SecondScreen = () => {
   const styles = useStyles();
   const navigation = useNavigation();
+
   const handleBackPress = () => {
     navigation.goBack();
   };
+
   return (
     <Screen title="Second screen" subtitle="Very nice!">
       <Container style={styles.container}>
