@@ -48,6 +48,8 @@
     "preset": "react-native"
   },
   "husky": {
-    "pre-commit": "npm run lint:fix"
+    "hooks": {
+      "pre-commit": "npm run lint:fix"
+    }
   }
 }
