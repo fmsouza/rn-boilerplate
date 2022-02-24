@@ -25,6 +25,7 @@ export type Theme = RNTheme & {
   };
   text: {
     baseSize: number;
+    header: number;
   };
   navbar: Partial<{
     headerStyle: Partial<{}>;
